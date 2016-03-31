@@ -1,2 +1,2 @@
-# ee-pocket-reference
-Electrical Engineering Pocket Reference
+#Electrical Engineering Pocket Reference
+Useful tools for Electrical Engineers

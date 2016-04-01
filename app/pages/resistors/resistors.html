@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Resistor Calculator</ion-title>
+</ion-navbar>
+
+<ion-content class="has-header grid-page">
+  <ion-row>
+    <ion-col width-10><div (click)="doRadio(1, color1, color2, color3)" style="background-color: {{color1}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+    <ion-col width-10><div (click)="doRadio(2, color1, color2, color3)" style="background-color: {{color2}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+    <ion-col width-10><div (click)="doRadio(3, color1, color2, color3)" style="background-color: {{color3}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+  </ion-row>
+  
+  <ion-list>
+    <ion-item>
+        <ion-label floating>Resistance (&#937;)</ion-label>
+        <ion-input [(ngModel)]="resistance" type="number" (keyup)="calculateColor(resistance)"></ion-input>
+    </ion-item>
+  </ion-list>
+      
+
+</ion-content>

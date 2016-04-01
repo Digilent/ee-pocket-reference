@@ -2,7 +2,7 @@ import 'es6-shim';
 import {App, IonicApp, Platform, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
-import {ListPage} from './pages/list/list';
+import {ResistorPage} from './pages/resistors/resistors';
 
 
 @App({
@@ -24,7 +24,7 @@ class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Resistor Calculator', component: ResistorPage}
     ];
   }
 

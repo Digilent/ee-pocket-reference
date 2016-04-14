@@ -1,1 +1,6 @@
-<h1>Hello Resistor {{_sharedService.resistance}} {{_sharedService.color1}} {{_sharedService.color2}} {{_sharedService.color3}}</h1>
+<h1 padding>Resistance Colors</h1>
+<ion-row>
+    <ion-col width-10><div (click)="doRadio(1, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color1}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+    <ion-col width-10><div (click)="doRadio(2, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color2}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+    <ion-col width-10><div (click)="doRadio(3, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color3}}; width: 20px; height: 100px; border-style: solid; border-color: black;"></div></ion-col>
+</ion-row>

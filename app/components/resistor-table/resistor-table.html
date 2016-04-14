@@ -1,0 +1,10 @@
+<ion-row>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">0</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">0</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">10<sup>0</sup></div></ion-col>
+</ion-row>
+<ion-row *ngFor="#color of _sharedService.colors | slice: 1; #i = index">
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">{{i + 1}}</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">{{i + 1}}</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">10<sup>{{i + 1}}</sup></div></ion-col>
+</ion-row>

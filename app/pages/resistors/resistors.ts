@@ -2,11 +2,12 @@ import {Page, NavController, Alert} from 'ionic-angular';
 import {ResistorComponent} from '../../components/resistor/resistor.component';
 import {ResistanceComponent} from '../../components/resistance/resistance.component';
 import {ResistorService} from '../../services/resistor/resistor.service';
+import {ResistorTableComponent} from '../../components/resistor-table/resistor-table.component';
 
 
 @Page({
   templateUrl: 'build/pages/resistors/resistors.html',
-  directives: [ResistorComponent, ResistanceComponent],
+  directives: [ResistorComponent, ResistanceComponent, ResistorTableComponent],
   providers: [ResistorService]
 })
 export class ResistorPage {

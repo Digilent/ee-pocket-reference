@@ -1,8 +1,12 @@
 import {Page, NavController, Alert} from 'ionic-angular';
+import {ResistorComponent} from '../../components/resistor/resistor.component';
+import {ResistorService} from '../../services/resistor/resistor.service';
 
 
 @Page({
-  templateUrl: 'build/pages/resistors/resistors.html'
+  templateUrl: 'build/pages/resistors/resistors.html',
+  directives: [ResistorComponent],
+  providers: [ResistorService]
 })
 export class ResistorPage {
   selectedItem: any;
@@ -13,56 +17,28 @@ export class ResistorPage {
   colors: string[];
   resistance: number;
 
-  constructor(private nav: NavController) {
+  constructor(private nav: NavController, private _sharedService: ResistorService) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.color1 = 'black';
-    this.color2 = 'black';
-    this.color3 = 'black';
+    this.color1 = this._sharedService.getColors()[0];
+    this.color2 = this._sharedService.getColors()[1];
+    this.color3 = this._sharedService.getColors()[2];
     
-    this.colors = ['black','brown','red','orange','yellow','green','blue','violet','grey','white','gold','silver'];
-    
-    this.resistance = 0;
+    this.resistance = this._sharedService.getResistance();
+
   }
   
   calcResistance(color1: string, color2: string, color3: string) {
-        let index = [0, 0, 0];
-        let swag = 0;
-        for (let i = 0; i < this.colors.length; i++) {
-            if (color1 == this.colors[i]) {
-                index[0] = i;
-            }
-            if (color2 == this.colors[i]) {
-                index[1] = i;
-            }
-            if (color3 == this.colors[i]) {
-                index[2] = i;
-            }
-        }
-        if (index[2] == 10) {
-            index[2] = -1;
-        }
-        if (index[2] == 11) {
-            index[2] = -2;
-        }
-        this.resistance = Number(index[0].toString() + index[1].toString()) * Math.pow(10, index[2]);
-        
+      this._sharedService.calcResistance(color1, color2, color3);
+      this.resistance = this._sharedService.getResistance();
     }
     
     calculateColor(resistanceValue) {
-      let index = [0, 0, 0];
-      index[2] = resistanceValue.toString().length - 2;
-      index[1] = resistanceValue.toString()[1];
-      index[0] = resistanceValue.toString()[0];
-      if (index[2] == -1)
-      {
-          index[2] = 10;
-          index[1] = 0;
-      }
-      this.color1 = this.colors[index[0]];
-      this.color2 = this.colors[index[1]];
-      this.color3 = this.colors[index[2]];
+      let colorArray = this._sharedService.calculateColor(resistanceValue);
+      this.color1 = colorArray[0];
+      this.color2 = colorArray[1];
+      this.color3 = colorArray[2];
   }
-  
+
   doRadio(colorNumber: number, color1: string, color2: string, color3: string) {
     let alert = Alert.create();
     alert.setTitle('Resistor color');
@@ -148,14 +124,22 @@ export class ResistorPage {
         
         if (colorNumber == 1) {
             this.color1 = data;
+            this._sharedService.setColors(1, data);
         }
         if (colorNumber == 2) {
             this.color2 = data;
+            this._sharedService.setColors(2, data);
         }
         if (colorNumber == 3) {
             this.color3 = data;
+            this._sharedService.setColors(3, data);
         }
         this.calcResistance(this.color1, this.color2, this.color3);
+        this._sharedService.setResistance(this.resistance);
+        this.resistance = this._sharedService.getResistance();
+        this.color1 = this._sharedService.getColors()[0];
+        this.color2 = this._sharedService.getColors()[1];
+        this.color3 = this._sharedService.getColors()[2];
         this.testRadioOpen = false;
       }
     });

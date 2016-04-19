@@ -1,10 +1,55 @@
 <ion-row>
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">0</div></ion-col>
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">0</div></ion-col>
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: black; border-style: solid; border-color: black; color: white">10<sup>0</sup></div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px;">1st digit</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px;">2nd digit</div></ion-col>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px;">Multiplier</div></ion-col>
 </ion-row>
-<ion-row *ngFor="#color of _sharedService.colors | slice: 1; #i = index">
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">{{i + 1}}</div></ion-col>
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">{{i + 1}}</div></ion-col>
-    <ion-col width-20><div style="padding: 5px 5px 5px 5px; background-color: {{color}}; border-style: solid; border-color: black">10<sup>{{i + 1}}</sup></div></ion-col>
+<ion-row>
+    <ion-col width-20><div style="padding: 5px 5px 5px 5px;"></div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'black')}" (click)="colorSelect(2, 'black')" style="background-color: black; color: white">0</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'black')}" (click)="colorSelect(3, 'black')" style="background-color: black; color: white">10<sup>0</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'brown')}" (click)="colorSelect(1, 'brown')" style="background-color: brown;">1</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'brown')}" (click)="colorSelect(2, 'brown')" style="background-color: brown;">1</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'brown')}" (click)="colorSelect(3, 'brown')" style="background-color: brown;">10<sup>1</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'red')}" (click)="colorSelect(1, 'red')" style="background-color: red;">2</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'red')}" (click)="colorSelect(2, 'red')" style= "background-color: red;">2</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'red')}" (click)="colorSelect(3, 'red')" style= "background-color: red;">10<sup>2</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'orange')}" (click)="colorSelect(1, 'orange')" style= "background-color: orange;">3</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'orange')}" (click)="colorSelect(2, 'orange')" style= "background-color: orange;">3</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'orange')}" (click)="colorSelect(3, 'orange')" style= "background-color: orange;">10<sup>3</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'yellow')}" (click)="colorSelect(1, 'yellow')" style= "background-color: yellow;">4</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'yellow')}" (click)="colorSelect(2, 'yellow')" style= "background-color: yellow;">4</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'yellow')}" (click)="colorSelect(3, 'yellow')" style= "background-color: yellow;">10<sup>4</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'green')}" (click)="colorSelect(1, 'green')" style= "background-color: green;">5</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'green')}" (click)="colorSelect(2, 'green')" style= "background-color: green;">5</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'green')}" (click)="colorSelect(3, 'green')" style= "background-color: green;">10<sup>5</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'blue')}" (click)="colorSelect(1, 'blue')" style= "background-color: blue;">6</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'blue')}" (click)="colorSelect(2, 'blue')" style= "background-color: blue;">6</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'blue')}" (click)="colorSelect(3, 'blue')" style= "background-color: blue;">10<sup>6</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'violet')}" (click)="colorSelect(1, 'violet')" style= "background-color: violet;">7</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'violet')}" (click)="colorSelect(2, 'violet')" style= "background-color: violet;">7</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'violet')}" (click)="colorSelect(3, 'violet')" style= "background-color: violet;">10<sup>7</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'gray')}" (click)="colorSelect(1, 'gray')" style= "background-color: gray;">8</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'gray')}" (click)="colorSelect(2, 'gray')" style= "background-color: gray;">8</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'gold')}" (click)="colorSelect(3, 'gold')" style= "background-color: gold;">10<sup>-1</sup></div></ion-col>
+</ion-row>
+<ion-row>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(1, 'white')}" (click)="colorSelect(1, 'white')" style= "background-color: white;">9</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(2, 'white')}" (click)="colorSelect(2, 'white')" style= "background-color: white;">9</div></ion-col>
+    <ion-col width-20><div class="cell" [ngClass]="{selected: isSelected(3, 'silver')}" (click)="colorSelect(3, 'silver')" style= "background-color: silver; ">10<sup>-2</sup></div></ion-col>
 </ion-row>

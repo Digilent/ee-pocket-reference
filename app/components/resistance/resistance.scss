@@ -1,0 +1,22 @@
+.container
+{
+    position: relative; 
+    left: 50%; 
+    transform: 
+    translate(-50%); 
+    width: 70%; 
+    height:10%;
+}
+.label
+{
+    position: relative; 
+    display: block; 
+    font-size: 200%;
+}
+.input
+{
+    position: relative; 
+    display: block; 
+    left: 50%; 
+    font-size: 200%
+}

@@ -1,6 +1,7 @@
-<ion-list>
+<div class="container">
     <ion-item>
-        <ion-label floating>Resistance (&#937;)</ion-label>
-        <ion-input type="number" [(ngModel)]="_sharedService.resistance" (keyup)="_sharedService.calculateColor(_sharedService.resistance)"></ion-input>
+        <ion-label class="label" floating >Resistance (&#937;)</ion-label>
+        <ion-input class="input" type="number" [(ngModel)]="_sharedService.resistance" (ngModelChange)="_sharedService.calculateColor(_sharedService.resistance)"></ion-input>
     </ion-item>
- </ion-list>
+</div>
+<div style="clear: both; display: block; margin-bottom: 3%; height: 6%;"></div>

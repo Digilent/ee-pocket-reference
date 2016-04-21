@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {NgClass} from 'angular2/common';
 import {ResistorService} from '../../services/resistor/resistor.service';
 import {IONIC_DIRECTIVES} from 'ionic-angular'

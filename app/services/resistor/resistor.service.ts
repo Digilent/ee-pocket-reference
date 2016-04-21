@@ -3,9 +3,9 @@ import {Injectable} from 'angular2/core';
 @Injectable()
 export class ResistorService {
     public color1: any;
-    color2: any;
-    color3: any;
-    colors: string[];
+    public color2: any;
+    public color3: any;
+    private colors: string[];
     public resistance: number;
     
     constructor() {

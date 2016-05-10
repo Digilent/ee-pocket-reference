@@ -59,9 +59,13 @@ export class ResistorService {
         }
         if (index[2] == 10) {
             index[2] = -1;
+            this.resistance = Number((Number(index[0].toString() + index[1].toString()) * Math.pow(10, index[2])).toFixed(2));
+            return this.resistance;
         }
         if (index[2] == 11) {
             index[2] = -2;
+            this.resistance = Number((Number(index[0].toString() + index[1].toString()) * Math.pow(10, index[2])).toFixed(2));
+            return this.resistance;
         }
         this.resistance = Number(index[0].toString() + index[1].toString()) * Math.pow(10, index[2]);
         return this.resistance;

@@ -2,21 +2,31 @@
 {
     position: relative; 
     left: 50%; 
-    transform: 
-    translate(-50%); 
-    width: 70%; 
-    height:10%;
+    transform: translate(-50%); 
+    width: 80%; 
+    margin-bottom: 3%;
 }
 .label
 {
+    width: 100%;
     position: relative; 
+    text-align: center;
     display: block; 
-    font-size: 200%;
+    font-size: 150%;
+    left: 10%;
 }
 .input
 {
-    position: relative; 
-    display: block; 
-    left: 50%; 
-    font-size: 200%
+    input[type='number']::-webkit-inner-spin-button, 
+    input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    position: relative;
+    text-align: center;
+    font-size: 150%;
+}
+.sk .text-input
+{
+    text-align: center;
 }

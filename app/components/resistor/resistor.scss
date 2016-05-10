@@ -1,0 +1,36 @@
+.rcolor
+{
+    width: 6%; 
+    top: 11.5%; 
+    height: 73.5%; 
+    border-style: solid; 
+    border-color: black; 
+    position: absolute;
+}
+.leftCol
+{
+    z-index: 2; 
+    left: 36%;
+}
+.midCol
+{
+    z-index: 3; 
+    left: 48%;
+}
+.rightCol
+{
+    z-index: 4; 
+    left: 60%;
+}
+.resistorPic
+{
+    left: 50%; 
+    transform: translate(-50%); 
+    position: relative; 
+    display: inline-block; 
+    margin-top: 10px;
+}
+.resistor
+{
+    z-index: 1;
+}

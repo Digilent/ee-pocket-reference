@@ -9,3 +9,15 @@
     border-color: blue;
     border-width: 5px;
 }
+.colLabel
+{
+    padding: 5px 5px 5px 5px;
+}
+.divContainer
+{
+   left: 50%; 
+   transform: translate(-50%); 
+   position: relative; 
+   width: 75%; 
+   display: inline-block; 
+}

@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {ResistorService} from '../../services/resistor/resistor.service';
 import {NavController, Alert} from 'ionic-angular';
 
@@ -7,7 +7,7 @@ import {NavController, Alert} from 'ionic-angular';
   selector: 'resistor'
 })
 export class ResistorComponent {
-    testRadioOpen: boolean;  
+    radioOpen: boolean;  
 
   constructor(private nav: NavController, private _sharedService: ResistorService) {
 
@@ -106,12 +106,12 @@ export class ResistorComponent {
             this._sharedService.color3 = data;
         }
         this._sharedService.calcResistance(this._sharedService.color1, this._sharedService.color2, this._sharedService.color3);
-        this.testRadioOpen = false;
+        this.radioOpen = false;
       }
     });
     
     this.nav.present(alert).then(() => {
-      this.testRadioOpen = true;
+      this.radioOpen = true;
     });
   }
   

@@ -1,8 +1,6 @@
-<h1 padding style="text-align: center;">Resistor Color</h1>
-<div style="left: 50%; transform: translate(-50%); position: relative; display: inline-block;">
-    <img src="img/resistor.png" style="z-index: 1;">
-    <div (click)="doRadio(1, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color1}}; width: 4%; top: 10%; height: 75%; border-style: solid; border-color: black; position: absolute; z-index: 2; left: 39%;"></div>
-    <div (click)="doRadio(2, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color2}}; width: 4%; top: 10%; height: 75%; border-style: solid; border-color: black; position: absolute; z-index: 3; left: 48%;"></div>
-    <div (click)="doRadio(3, _sharedService.color1, _sharedService.color2, _sharedService.color3)" style="background-color: {{_sharedService.color3}}; width: 4%; top: 10%; height: 75%; border-style: solid; border-color: black; position: absolute; z-index: 4; left: 57%;"></div>
+<div class="resistorPic">
+    <img src="img/resistor.png" class="resistor">
+    <div (click)="doRadio(1, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor leftCol" style="background-color: {{_sharedService.color1}};"></div>
+    <div (click)="doRadio(2, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor midCol" style="background-color: {{_sharedService.color2}};"></div>
+    <div (click)="doRadio(3, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor rightCol" style="background-color: {{_sharedService.color3}};"></div>
 </div>
-<div style="clear: both; display: block;"></div>

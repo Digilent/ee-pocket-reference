@@ -1,4 +1,4 @@
-import {Page, NavController, Alert} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {ResistorComponent} from '../../components/resistor/resistor.component';
 import {ResistanceComponent} from '../../components/resistance/resistance.component';
 import {ResistorService} from '../../services/resistor/resistor.service';
@@ -13,7 +13,7 @@ import {ResistorTableComponent} from '../../components/resistor-table/resistor-t
 export class ResistorPage {
   selectedItem: any;
 
-  constructor(private nav: NavController, private _sharedService: ResistorService) {
+  constructor(private _sharedService: ResistorService) {
 
   }
   

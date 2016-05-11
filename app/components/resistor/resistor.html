@@ -1,6 +1,6 @@
-<div class="resistorPic">
-    <img src="img/resistor.png" class="resistor">
-    <div (click)="doRadio(1, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor leftCol" style="background-color: {{_sharedService.color1}};"></div>
-    <div (click)="doRadio(2, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor midCol" style="background-color: {{_sharedService.color2}};"></div>
-    <div (click)="doRadio(3, _sharedService.color1, _sharedService.color2, _sharedService.color3)" class="rcolor rightCol" style="background-color: {{_sharedService.color3}};"></div>
+<div class="resistorContainer">
+    <img src="img/resistor.png" class="resistorImage">
+    <div (click)="doRadio(1, resistorService.color1, resistorService.color2, resistorService.color3)" class="resistorColorBand leftColorBand" style="background-color: {{resistorService.color1}};"></div>
+    <div (click)="doRadio(2, resistorService.color1, resistorService.color2, resistorService.color3)" class="resistorColorBand midColorBand" style="background-color: {{resistorService.color2}};"></div>
+    <div (click)="doRadio(3, resistorService.color1, resistorService.color2, resistorService.color3)" class="resistorColorBand rightColorBand" style="background-color: {{resistorService.color3}};"></div>
 </div>

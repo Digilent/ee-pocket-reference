@@ -1,6 +1,8 @@
 import {Component} from 'angular2/core';
-import {ResistorService} from '../../services/resistor/resistor.service';
 import {IONIC_DIRECTIVES} from 'ionic-angular'
+
+//Services
+import {ResistorService} from '../../services/resistor/resistor.service';
 
 @Component({
   templateUrl: 'build/components/resistance/resistance.html',
@@ -8,9 +10,10 @@ import {IONIC_DIRECTIVES} from 'ionic-angular'
   directives: [IONIC_DIRECTIVES]
 })
 export class ResistanceComponent { 
-
-  constructor(private _sharedService: ResistorService) {
-
+  private resistorService: ResistorService;
+  
+  constructor(_resistorService: ResistorService) {
+      this.resistorService = _resistorService;
   }
   
 }

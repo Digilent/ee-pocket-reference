@@ -1,4 +1,4 @@
-.container
+.resistanceContainer
 {
     position: relative; 
     left: 50%; 
@@ -6,7 +6,8 @@
     width: 80%; 
     margin-bottom: 3%;
 }
-.label
+
+.resistanceLabel
 {
     width: 100%;
     position: relative; 
@@ -15,7 +16,8 @@
     font-size: 150%;
     left: 10%;
 }
-.input
+
+.resistanceInput
 {
     input[type='number']::-webkit-inner-spin-button, 
     input[type='number']::-webkit-outer-spin-button { 
@@ -26,7 +28,8 @@
     text-align: center;
     font-size: 150%;
 }
-.sk .text-input
+
+.resistanceValue .text-input
 {
     text-align: center;
 }

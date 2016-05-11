@@ -5,20 +5,82 @@
     border-color: black;
     border-width: 5px;
 }
+
 .selected
 {
     border-color: #62a945;
     border-width: 5px;
 }
+
 .colLabel
 {
     padding: 5px 5px 5px 5px;
 }
-.divContainer
+
+.tableContainer
 {
-   left: 50%; 
-   transform: translate(-50%); 
-   position: relative; 
    width: 75%; 
-   display: inline-block; 
+   margin: auto;
+}
+
+.blackRow
+{
+   background-color: black; 
+   color: white; 
+}
+
+.brownRow
+{
+    background-color: brown;
+}
+
+.redRow
+{
+    background-color: red;
+}
+
+.orangeRow
+{
+    background-color: orange;
+}
+
+.yellowRow
+{
+    background-color: yellow;
+}
+
+.greenRow
+{
+    background-color: green;
+}
+
+.blueRow
+{
+    background-color: blue; 
+    color: white;
+}
+
+.violetRow
+{
+    background-color: violet;
+}
+
+.greyRow
+{
+    background-color: grey;
+}
+
+.whiteRow
+{
+    background-color: white;
+}
+
+.goldCol
+{
+    background-color: gold;
+}
+
+.silverCol
+{
+    background-color: silver;
 }

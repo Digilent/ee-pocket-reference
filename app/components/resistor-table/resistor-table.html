@@ -1,57 +1,57 @@
-<div class="divContainer">
+<div class="tableContainer">
 <ion-row>
     <ion-col width-33><div class="colLabel">1st digit</div></ion-col>
     <ion-col width-33><div class="colLabel">2nd digit</div></ion-col>
     <ion-col width-33><div class="colLabel">Multiplier</div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" style="background-color: black; color: white;">0</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'black')}" (click)="colorSelect(2, 'black')" style="background-color: black; color: white">0</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'black')}" (click)="colorSelect(3, 'black')" style="background-color: black; color: white">10<sup>0</sup></div></ion-col>
+    <ion-col width-33><div class="cell blackRow">0</div></ion-col>
+    <ion-col width-33><div class="cell blackRow" [ngClass]="{selected: isSelected(2, 'black')}" (click)="selectColor(2, 'black')">0</div></ion-col>
+    <ion-col width-33><div class="cell blackRow" [ngClass]="{selected: isSelected(3, 'black')}" (click)="selectColor(3, 'black')">10<sup>0</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'brown')}" (click)="colorSelect(1, 'brown')" style="background-color: brown;">1</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'brown')}" (click)="colorSelect(2, 'brown')" style="background-color: brown;">1</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'brown')}" (click)="colorSelect(3, 'brown')" style="background-color: brown;">10<sup>1</sup></div></ion-col>
+    <ion-col width-33><div class="cell brownRow" [ngClass]="{selected: isSelected(1, 'brown')}" (click)="selectColor(1, 'brown')">1</div></ion-col>
+    <ion-col width-33><div class="cell brownRow" [ngClass]="{selected: isSelected(2, 'brown')}" (click)="selectColor(2, 'brown')">1</div></ion-col>
+    <ion-col width-33><div class="cell brownRow" [ngClass]="{selected: isSelected(3, 'brown')}" (click)="selectColor(3, 'brown')">10<sup>1</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'red')}" (click)="colorSelect(1, 'red')" style="background-color: red;">2</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'red')}" (click)="colorSelect(2, 'red')" style= "background-color: red;">2</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'red')}" (click)="colorSelect(3, 'red')" style= "background-color: red;">10<sup>2</sup></div></ion-col>
+    <ion-col width-33><div class="cell redRow" [ngClass]="{selected: isSelected(1, 'red')}" (click)="selectColor(1, 'red')">2</div></ion-col>
+    <ion-col width-33><div class="cell redRow" [ngClass]="{selected: isSelected(2, 'red')}" (click)="selectColor(2, 'red')">2</div></ion-col>
+    <ion-col width-33><div class="cell redRow" [ngClass]="{selected: isSelected(3, 'red')}" (click)="selectColor(3, 'red')">10<sup>2</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'orange')}" (click)="colorSelect(1, 'orange')" style= "background-color: orange;">3</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'orange')}" (click)="colorSelect(2, 'orange')" style= "background-color: orange;">3</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'orange')}" (click)="colorSelect(3, 'orange')" style= "background-color: orange;">10<sup>3</sup></div></ion-col>
+    <ion-col width-33><div class="cell orangeRow" [ngClass]="{selected: isSelected(1, 'orange')}" (click)="selectColor(1, 'orange')">3</div></ion-col>
+    <ion-col width-33><div class="cell orangeRow" [ngClass]="{selected: isSelected(2, 'orange')}" (click)="selectColor(2, 'orange')">3</div></ion-col>
+    <ion-col width-33><div class="cell orangeRow" [ngClass]="{selected: isSelected(3, 'orange')}" (click)="selectColor(3, 'orange')">10<sup>3</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'yellow')}" (click)="colorSelect(1, 'yellow')" style= "background-color: yellow;">4</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'yellow')}" (click)="colorSelect(2, 'yellow')" style= "background-color: yellow;">4</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'yellow')}" (click)="colorSelect(3, 'yellow')" style= "background-color: yellow;">10<sup>4</sup></div></ion-col>
+    <ion-col width-33><div class="cell yellowRow" [ngClass]="{selected: isSelected(1, 'yellow')}" (click)="selectColor(1, 'yellow')">4</div></ion-col>
+    <ion-col width-33><div class="cell yellowRow" [ngClass]="{selected: isSelected(2, 'yellow')}" (click)="selectColor(2, 'yellow')">4</div></ion-col>
+    <ion-col width-33><div class="cell yellowRow" [ngClass]="{selected: isSelected(3, 'yellow')}" (click)="selectColor(3, 'yellow')">10<sup>4</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'green')}" (click)="colorSelect(1, 'green')" style= "background-color: green;">5</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'green')}" (click)="colorSelect(2, 'green')" style= "background-color: green;">5</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'green')}" (click)="colorSelect(3, 'green')" style= "background-color: green;">10<sup>5</sup></div></ion-col>
+    <ion-col width-33><div class="cell greenRow" [ngClass]="{selected: isSelected(1, 'green')}" (click)="selectColor(1, 'green')">5</div></ion-col>
+    <ion-col width-33><div class="cell greenRow" [ngClass]="{selected: isSelected(2, 'green')}" (click)="selectColor(2, 'green')">5</div></ion-col>
+    <ion-col width-33><div class="cell greenRow" [ngClass]="{selected: isSelected(3, 'green')}" (click)="selectColor(3, 'green')">10<sup>5</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'blue')}" (click)="colorSelect(1, 'blue')" style= "background-color: blue; color: white;">6</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'blue')}" (click)="colorSelect(2, 'blue')" style= "background-color: blue; color: white;">6</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'blue')}" (click)="colorSelect(3, 'blue')" style= "background-color: blue; color: white;">10<sup>6</sup></div></ion-col>
+    <ion-col width-33><div class="cell blueRow" [ngClass]="{selected: isSelected(1, 'blue')}" (click)="selectColor(1, 'blue')">6</div></ion-col>
+    <ion-col width-33><div class="cell blueRow" [ngClass]="{selected: isSelected(2, 'blue')}" (click)="selectColor(2, 'blue')">6</div></ion-col>
+    <ion-col width-33><div class="cell blueRow" [ngClass]="{selected: isSelected(3, 'blue')}" (click)="selectColor(3, 'blue')">10<sup>6</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'violet')}" (click)="colorSelect(1, 'violet')" style= "background-color: violet;">7</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'violet')}" (click)="colorSelect(2, 'violet')" style= "background-color: violet;">7</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'violet')}" (click)="colorSelect(3, 'violet')" style= "background-color: violet;">10<sup>7</sup></div></ion-col>
+    <ion-col width-33><div class="cell violetRow" [ngClass]="{selected: isSelected(1, 'violet')}" (click)="selectColor(1, 'violet')">7</div></ion-col>
+    <ion-col width-33><div class="cell violetRow" [ngClass]="{selected: isSelected(2, 'violet')}" (click)="selectColor(2, 'violet')">7</div></ion-col>
+    <ion-col width-33><div class="cell violetRow" [ngClass]="{selected: isSelected(3, 'violet')}" (click)="selectColor(3, 'violet')">10<sup>7</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'grey')}" (click)="colorSelect(1, 'grey')" style= "background-color: grey;">8</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'grey')}" (click)="colorSelect(2, 'grey')" style= "background-color: grey;">8</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'gold')}" (click)="colorSelect(3, 'gold')" style= "background-color: gold;">10<sup>-1</sup></div></ion-col>
+    <ion-col width-33><div class="cell greyRow" [ngClass]="{selected: isSelected(1, 'grey')}" (click)="selectColor(1, 'grey')">8</div></ion-col>
+    <ion-col width-33><div class="cell greyRow" [ngClass]="{selected: isSelected(2, 'grey')}" (click)="selectColor(2, 'grey')">8</div></ion-col>
+    <ion-col width-33><div class="cell goldCol" [ngClass]="{selected: isSelected(3, 'gold')}" (click)="selectColor(3, 'gold')">10<sup>-1</sup></div></ion-col>
 </ion-row>
 <ion-row>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(1, 'white')}" (click)="colorSelect(1, 'white')" style= "background-color: white;">9</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(2, 'white')}" (click)="colorSelect(2, 'white')" style= "background-color: white;">9</div></ion-col>
-    <ion-col width-33><div class="cell" [ngClass]="{selected: isSelected(3, 'silver')}" (click)="colorSelect(3, 'silver')" style= "background-color: silver; ">10<sup>-2</sup></div></ion-col>
+    <ion-col width-33><div class="cell whiteRow" [ngClass]="{selected: isSelected(1, 'white')}" (click)="selectColor(1, 'white')">9</div></ion-col>
+    <ion-col width-33><div class="cell whiteRow" [ngClass]="{selected: isSelected(2, 'white')}" (click)="selectColor(2, 'white')">9</div></ion-col>
+    <ion-col width-33><div class="cell silverCol" [ngClass]="{selected: isSelected(3, 'silver')}" (click)="selectColor(3, 'silver')">10<sup>-2</sup></div></ion-col>
 </ion-row>
 </div>

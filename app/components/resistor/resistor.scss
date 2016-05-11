@@ -1,4 +1,18 @@
-.rcolor
+.resistorContainer
+{
+    left: 50%; 
+    transform: translate(-50%); 
+    position: relative; 
+    display: inline-block; 
+    margin-top: 10px;
+}
+
+.resistorImage
+{
+    z-index: 1;
+}
+
+.resistorContainer .resistorColorBand
 {
     width: 6%; 
     top: 11.5%; 
@@ -7,30 +21,21 @@
     border-color: black; 
     position: absolute;
 }
-.leftCol
+
+.resistorContainer .leftColorBand
 {
     z-index: 2; 
     left: 36%;
 }
-.midCol
+
+.resistorContainer .midColorBand
 {
     z-index: 3; 
     left: 48%;
 }
-.rightCol
+
+.resistorContainer .rightColorBand
 {
     z-index: 4; 
     left: 60%;
-}
-.resistorPic
-{
-    left: 50%; 
-    transform: translate(-50%); 
-    position: relative; 
-    display: inline-block; 
-    margin-top: 10px;
-}
-.resistor
-{
-    z-index: 1;
 }

@@ -1,18 +1,25 @@
 import {Component} from 'angular2/core';
-import {ResistorService} from '../../services/resistor/resistor.service';
 import {NavController, Alert} from 'ionic-angular';
+
+//Services
+import {ResistorService} from '../../services/resistor/resistor.service';
 
 @Component({
   templateUrl: 'build/components/resistor/resistor.html',
   selector: 'resistor'
 })
 export class ResistorComponent {
+    nav: NavController;
+    private resistorService: ResistorService;
+    
     radioOpen: boolean;  
 
-  constructor(private nav: NavController, private _sharedService: ResistorService) {
-
+  constructor(_nav: NavController, _resistorService: ResistorService) {
+      this.resistorService = _resistorService;
+      this.nav = _nav;
   }
   
+  //Open radio alert and present options. Set new color and recalculate resistance.
   doRadio(colorNumber: number, color1: string, color2: string, color3: string) {
     let alert = Alert.create();
     alert.setTitle('Resistor color');
@@ -62,8 +69,8 @@ export class ResistorComponent {
 
     alert.addInput({
       type: 'radio',
-      label: 'Purple',
-      value: 'purple'
+      label: 'Violet',
+      value: 'violet'
     });
     
     alert.addInput({
@@ -97,15 +104,15 @@ export class ResistorComponent {
         console.log('Radio data:', data);
         
         if (colorNumber == 1) {
-            this._sharedService.color1 = data;
+            this.resistorService.color1 = data;
         }
         if (colorNumber == 2) {
-            this._sharedService.color2 = data;
+            this.resistorService.color2 = data;
         }
         if (colorNumber == 3) {
-            this._sharedService.color3 = data;
+            this.resistorService.color3 = data;
         }
-        this._sharedService.calcResistance(this._sharedService.color1, this._sharedService.color2, this._sharedService.color3);
+        this.resistorService.calcResistance(this.resistorService.color1, this.resistorService.color2, this.resistorService.color3);
         this.radioOpen = false;
       }
     });

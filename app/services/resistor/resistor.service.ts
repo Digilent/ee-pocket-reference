@@ -33,7 +33,7 @@ export class ResistorService {
     }
     
     //Calculates colors from resistance value
-    calcColor(resistanceValue: number) {
+    calcColors(resistanceValue: number) {
         let resistanceString = Number(resistanceValue).toFixed(2);
         //Color band is not gold or silver
         if (resistanceValue >= 10) {

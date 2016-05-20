@@ -20,7 +20,7 @@ export class ResistorComponent {
   }
   
   //Open radio alert and present options. Set new color and recalculate resistance.
-  doRadio(colorNumber: number, color1: string, color2: string, color3: string) {
+  doRadio(colorNumber: number, color1: string, color2: string, color3: string, bandNum: number) {
     let alert = Alert.create();
     alert.setTitle('Resistor color');
 
@@ -73,29 +73,34 @@ export class ResistorComponent {
       value: 'violet'
     });
     
-    alert.addInput({
-      type: 'radio',
-      label: 'Grey',
-      value: 'grey'
-    });
+    if (bandNum < 3) {
+        alert.addInput({
+            type: 'radio',
+            label: 'Grey',
+            value: 'grey'
+        });
 
-    alert.addInput({
-      type: 'radio',
-      label: 'White',
-      value: 'white'
-    });
+        alert.addInput({
+            type: 'radio',
+            label: 'White',
+            value: 'white'
+        });
+    }
     
-    alert.addInput({
-      type: 'radio',
-      label: 'Gold',
-      value: 'gold'
-    });
+    if (bandNum == 3) {
+        alert.addInput({
+            type: 'radio',
+            label: 'Gold',
+            value: 'gold'
+        });
+            
+        alert.addInput({
+            type: 'radio',
+            label: 'Silver',
+            value: 'silver'
+        });
+    }
     
-    alert.addInput({
-      type: 'radio',
-      label: 'Silver',
-      value: 'silver'
-    });
 
     alert.addButton('Cancel');
     alert.addButton({

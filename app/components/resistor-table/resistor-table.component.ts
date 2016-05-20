@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 import {NgClass} from 'angular2/common';
-import {IONIC_DIRECTIVES} from 'ionic-angular'
+import {IONIC_DIRECTIVES} from 'ionic-angular';
 
 //Services
 import {ResistorService} from '../../services/resistor/resistor.service';

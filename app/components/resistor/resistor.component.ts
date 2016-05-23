@@ -99,8 +99,7 @@ export class ResistorComponent {
             label: 'Silver',
             value: 'silver'
         });
-    }
-    
+    } 
 
     alert.addButton('Cancel');
     alert.addButton({
